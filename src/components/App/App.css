@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(231, 228, 228);
+}
+
+body {
+    background: rgb(192, 190, 190);
+}
+
+.app-body {
+    display: flex;
+}

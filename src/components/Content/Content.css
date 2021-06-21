@@ -1,0 +1,6 @@
+.content {
+    min-width: 90%;
+    min-height: 100vh;
+    background-color: rgb(50, 50, 87);
+    padding: 20px;
+}
