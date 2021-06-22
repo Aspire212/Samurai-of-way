@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './Nav.css'
 
@@ -7,22 +7,22 @@ const Nav = () => {
 	return (
 		<ul className='navigation'>
 			<li>
-				<Link to='/'>Home</Link>
+				<NavLink activeClassName='link-active' to='/Home'>Home</NavLink>
 			</li>
 			<li>
-				<Link to='/profile'>Profile</Link>
+				<NavLink activeClassName='link-active' to='/profile'>Profile</NavLink>
 			</li>
 			<li>
-				<Link to='/news'>News</Link>
+				<NavLink activeClassName='link-active' to='/news'>News</NavLink>
 			</li>
 			<li>
-				<Link to='/messages'>Messages</Link>
+				<NavLink activeClassName='link-active' to='/messages'>Messages</NavLink>
 			</li>
 			<li>
-				<Link to='/music'>Music</Link>
+				<NavLink activeClassName='link-active' to='/music'>Music</NavLink>
 			</li>
 			<li>
-				<Link to='/settings'>Settings</Link>
+				<NavLink activeClassName='link-active' to='/settings'>Settings</NavLink>
 			</li>
 		</ul>
 	)

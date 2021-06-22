@@ -12,3 +12,7 @@
 .navigation li {
     margin: 10px 0;
 }
+
+.link-active {
+    color: coral;
+}

@@ -10,7 +10,7 @@ const Content = () => {
 	return (
 		<div className='content'>
 			<Switch>
-				<Route exact path='/'>
+				<Route  path='/Home'>
 					Home
 				</Route>
 				<Route path='/news'>
