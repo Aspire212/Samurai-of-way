@@ -1,23 +1,14 @@
-import React from 'react'
-import MyPosts from './MyPosts'
+import React from "react";
+import MyPosts from "./MyPosts";
+import ProfileInfo from "./ProfileInfo";
 
-import './Profile.css'
+import "./Profile.css";
 
 const Profile = () => (
-  
-  <>
-    <div className='profile'>
-      <img
-        src='https://www.industrialempathy.com/img/remote/ZiClJf-1920w.jpg'
-        alt='Beach'/>
+    <div className="profile">
+        <ProfileInfo />
+        <MyPosts />
     </div>
-    <div>
-      ava + desk
+);
 
-      </div>
-      <MyPosts />
-  </>
-)
-
-
-export default Profile
+export default Profile;
