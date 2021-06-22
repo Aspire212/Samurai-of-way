@@ -4,24 +4,38 @@ import Message from "./Message";
 
 import "./Dialogs.css";
 
+const Dialogs = () => {
 
+    let dialogsData = [
+        { name: "Stason", id: 1 },
+        { name: "Dimych", id: 2 },
+        { name: "Artyom", id: 3 },
+        { name: "Alesya", id: 4 },
+        { name: "Ludaria", id: 5 },
+        { name: "Sasha", id: 6 },
+        { name: "Varya", id: 7 },
+    ];
 
-const Dialogs = () => (
-    <div className="dialogs">
-        <div className="dialogs-items">
-           <DialogItem name='Stason' id='1' />
-           <DialogItem name='Dimuch' id='2' />
-           <DialogItem name='Artyom' id='3' />
-           <DialogItem name='Alesya' id='4' />
-           <DialogItem name='Luda' id='5' />
-           <DialogItem name='Sasha' id='6' />
+    let messagesData = [
+        { text: "Hi", id: 1 },
+        { text: "How is your it-kamsutra?", id: 2 },
+        { text: "Yo", id: 3 },
+        { text: "Yo-yo", id: 4 },
+    ];
+    return (
+        <div className="dialogs">
+            <div className="dialogs-items">
+                {dialogsData.map((user) => (
+                    <DialogItem key={user.id} name={user.name} id={user.id} />
+                ))}
+            </div>
+            <div className="messages">
+                {messagesData.map((mes) => (
+                    <Message key={mes.id} text={mes.text} />
+                ))}
+            </div>
         </div>
-        <div className="messages">
-            <Message text='Hi'/>
-            <Message text='How is your it-kamsutra?'/>
-            <Message text='Yo'/>
-        </div>
-    </div>
-);
+    );
+};
 
 export default Dialogs;
