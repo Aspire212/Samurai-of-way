@@ -19,7 +19,7 @@ const Content = () => {
 				<Route path='/profile'>
 					<Profile />
 				</Route>
-				<Route path='/messages'>
+				<Route path='/dialogs'>
 					<Dialogs />
 				</Route>
 				<Route path='/music'>
