@@ -3,19 +3,7 @@ import Post from "./Post";
 
 import "./MyPosts.css";
 
-const MyPosts = () => {
-    const postData = [
-        {
-            id: 1,
-            message: "It's my first post!",
-            likesCount: 11,
-        },
-        {
-            id: 2,
-            message: "Hi, how are you?",
-            likesCount: 12,
-        },
-    ];
+const MyPosts = ({ postData }) => {
 
     return (
         <div className="posts-block">
