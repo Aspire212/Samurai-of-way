@@ -4,7 +4,6 @@ import Post from "./Post";
 import "./MyPosts.css";
 
 const MyPosts = ({ postData }) => {
-
     return (
         <div className="posts-block">
             <h3>My posts</h3>

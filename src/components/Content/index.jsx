@@ -13,10 +13,13 @@ const Content = ({ postData, messagesData, dialogsData }) => {
                 <Route path="/Home">Home</Route>
                 <Route path="/news">News</Route>
                 <Route path="/profile">
-                    <Profile postData={postData}/>
+                    <Profile postData={postData} />
                 </Route>
                 <Route path="/dialogs">
-                    <Dialogs dialogsData={dialogsData} messagesData={messagesData}/>
+                    <Dialogs
+                        dialogsData={dialogsData}
+                        messagesData={messagesData}
+                    />
                 </Route>
                 <Route path="/music">
                     <Music />
