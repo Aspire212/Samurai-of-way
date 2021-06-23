@@ -4,16 +4,15 @@ import Nav from "../Nav";
 import Content from "../Content";
 import "./App.css";
 
-const App = ({ dialogsData, messagesData, postData }) => {
+const App = ({ state }) => {
     return (
         <div className="wrapper">
             <Header />
             <div className="app-body">
                 <Nav />
                 <Content
-                    dialogsData={dialogsData}
-                    messagesData={messagesData}
-                    postData={postData}
+                    dialogsData={state.dialogsPage}  
+                    postData={state.profilePage.posts}
                 />
             </div>
         </div>

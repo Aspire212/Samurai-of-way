@@ -4,10 +4,10 @@ import ProfileInfo from "./ProfileInfo";
 
 import "./Profile.css";
 
-const Profile = () => (
+const Profile = ({ postData }) => (
     <div className="profile">
         <ProfileInfo />
-        <MyPosts />
+        <MyPosts postData={postData}/>
     </div>
 );
 
