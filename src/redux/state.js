@@ -28,6 +28,24 @@ const state = {
             { text: "Yo", id: 3 },
             { text: "Yo-yo", id: 4 },
         ],
+    },
+    sitebar: {
+        friends: [{
+                id: 1,
+                name: 'Sasha',
+                img: 'https://otyrar.kz/wp-content/uploads/2018/11/%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0.jpeg'
+            },
+            {
+                id: 2,
+                name: 'Ludaria',
+                img: 'https://xaxa-net.ru/uploads/posts/2014-03/1394119777_xaxanet-true-20140306-1.jpg'
+            },
+            {
+                id: 3,
+                name: 'Varya',
+                img: 'https://art-assorty.ru/uploads/posts/2017-11/1509700195_4f6e968c04b1a7ddbccb8bb2a7b48a0c.jpg'
+            }
+        ]
     }
 
 

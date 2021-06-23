@@ -9,7 +9,7 @@ const App = ({ state }) => {
         <div className="wrapper">
             <Header />
             <div className="app-body">
-                <Nav />
+                <Nav  friendsData={state.sitebar.friends}/>
                 <Content
                     dialogsData={state.dialogsPage}  
                     postData={state.profilePage.posts}

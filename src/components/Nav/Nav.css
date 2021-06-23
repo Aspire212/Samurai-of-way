@@ -4,7 +4,7 @@
     min-height: 100vh;
     justify-content: flex-start;
     align-items: center;
-    width: 200px;
+    min-width: 250px;
     background: rgb(7, 7, 190);
     box-shadow: inset 0 0 2px white;
 }
@@ -15,4 +15,11 @@
 
 .link-active {
     color: coral;
+}
+
+.sitebar-friends {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
