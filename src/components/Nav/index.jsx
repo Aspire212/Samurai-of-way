@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = ({ friendsData }) => {
-    console.log(friendsData)
     return (
         <div className="navigation">
             <ul>

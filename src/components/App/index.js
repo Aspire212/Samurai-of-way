@@ -4,15 +4,16 @@ import Nav from "../Nav";
 import Content from "../Content";
 import "./App.css";
 
-const App = ({ state }) => {
+const App = ({ state, addPost }) => {
     return (
         <div className="wrapper">
             <Header />
             <div className="app-body">
                 <Nav  friendsData={state.sitebar.friends}/>
                 <Content
-                    dialogsData={state.dialogsPage}  
+                    dialogsData={state.dialogsPage}
                     postData={state.profilePage.posts}
+                    addPost={addPost}
                 />
             </div>
         </div>

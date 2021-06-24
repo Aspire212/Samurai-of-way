@@ -6,14 +6,16 @@ import { Switch, Route } from "react-router-dom";
 
 import "./Content.css";
 
-const Content = ({ postData, messagesData, dialogsData }) => {
+const Content = ({ postData, messagesData, dialogsData, addPost }) => {
     return (
         <div className="content">
             <Switch>
                 <Route path="/Home">Home</Route>
                 <Route path="/news">News</Route>
                 <Route path="/profile">
-                    <Profile postData={postData} />
+                    <Profile
+                        postData={postData}
+                        addPost={addPost} />
                 </Route>
                 <Route path="/dialogs">
                     <Dialogs
