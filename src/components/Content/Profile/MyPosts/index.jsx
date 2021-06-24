@@ -4,15 +4,25 @@ import Post from "./Post";
 import "./MyPosts.css";
 
 const MyPosts = ({ postData }) => {
+
+    let newPostElement = React.createRef();
+
+    let addPosts = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    }
+
     return (
         <div className="posts-block">
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea></textarea>
+                    <textarea ref={ newPostElement }></textarea>
                 </div>
                 <div>
-                    <button className="add-post">add post</button>
+                    <button 
+                        className="add-post"
+                        onClick={ addPosts }>add post</button>
                 </div>
             </div>
             <div className="posts">
