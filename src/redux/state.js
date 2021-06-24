@@ -11,7 +11,8 @@ const state = {
                 message: "Hi, how are you?",
                 likesCount: 12,
             },
-        ]
+        ],
+        newPostText: 'it-kamasutra.com'
     },
     dialogsPage: {
         dialogs: [
@@ -52,14 +53,19 @@ const state = {
 
 }
 
+export let updateNewPostText = newText => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireThree(state)
+}
 
-export let addPost = postMessage => {
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         likesCount: 0,
     }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
     rerenderEntireThree(state)
 }
 

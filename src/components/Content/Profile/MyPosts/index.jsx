@@ -3,8 +3,7 @@ import Post from "./Post";
 
 import "./MyPosts.css";
 
-const MyPosts = ({ postData, addPost }) => {
-
+const MyPosts = ({ postData, addPost, updateNewPostText }) => {
     let newPostElement = React.createRef();
 
     return (
@@ -12,19 +11,22 @@ const MyPosts = ({ postData, addPost }) => {
             <h3>My posts</h3>
             <div>
                 <div>
-                    <textarea ref={ newPostElement }></textarea>
+                    <textarea
+                        ref={newPostElement}
+                        value={postData.newPostText}
+                        onChange={() => updateNewPostText(newPostElement.current.value)}
+                    />
                 </div>
                 <div>
                     <button
                         className="add-post"
-                        onClick={ () => {
-                            addPost(newPostElement.current.value)
-                            newPostElement.current.value = ''
-                            } }>add post</button>
+                        onClick={ addPost }>
+                        add post
+                    </button>
                 </div>
             </div>
             <div className="posts">
-                {postData.map((post) => (
+                {postData.posts.map((post) => (
                     <Post
                         key={post.id + Math.random()}
                         message={post.message}
