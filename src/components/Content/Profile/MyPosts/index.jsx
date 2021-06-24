@@ -4,7 +4,6 @@ import Post from "./Post";
 import "./MyPosts.css";
 
 const MyPosts = ({ postData, addPost, updateNewPostText }) => {
-    let newPostElement = React.createRef();
 
     return (
         <div className="posts-block">
@@ -12,9 +11,8 @@ const MyPosts = ({ postData, addPost, updateNewPostText }) => {
             <div>
                 <div>
                     <textarea
-                        ref={newPostElement}
                         value={postData.newPostText}
-                        onChange={() => updateNewPostText(newPostElement.current.value)}
+                        onChange={(e) => updateNewPostText(e.target.value)}
                     />
                 </div>
                 <div>

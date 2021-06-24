@@ -5,8 +5,6 @@ import Message from "./Message";
 import "./Dialogs.css";
 
 const Dialogs = ({ dialogsData, addMessage, updateMessage }) => {
-    let newMessageElement = React.createRef();
-
     return (
         <div className="dialogs">
             <div className="dialogs-items">
@@ -21,10 +19,9 @@ const Dialogs = ({ dialogsData, addMessage, updateMessage }) => {
             </div>
             <div>
                 <textarea
-                    ref={newMessageElement}
                     value={dialogsData.newMessageText}
-                    onChange={() =>
-                        updateMessage(newMessageElement.current.value)
+                    onChange={(e) =>
+                        updateMessage(e.target.value)
                     }
                 />
                 <div>
