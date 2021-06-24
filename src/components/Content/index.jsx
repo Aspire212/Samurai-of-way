@@ -6,7 +6,15 @@ import { Switch, Route } from "react-router-dom";
 
 import "./Content.css";
 
-const Content = ({ postData, messagesData, dialogsData, addPost, updateNewPostText }) => {
+const Content = ({
+    postData,
+    messagesData,
+    dialogsData,
+    addPost,
+    updateNewPostText,
+    addMessage,
+    updateMessage,
+}) => {
     return (
         <div className="content">
             <Switch>
@@ -16,12 +24,15 @@ const Content = ({ postData, messagesData, dialogsData, addPost, updateNewPostTe
                     <Profile
                         postData={postData}
                         addPost={addPost}
-                        updateNewPostText={updateNewPostText} />
+                        updateNewPostText={updateNewPostText}
+                    />
                 </Route>
                 <Route path="/dialogs">
                     <Dialogs
                         dialogsData={dialogsData}
                         messagesData={messagesData}
+                        addMessage={addMessage}
+                        updateMessage={updateMessage}
                     />
                 </Route>
                 <Route path="/music">

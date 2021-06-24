@@ -30,6 +30,7 @@ const state = {
             { text: "Yo", id: 3 },
             { text: "Yo-yo", id: 4 },
         ],
+        newMessageText: 'it-kamasutra.com'
     },
     sitebar: {
         friends: [{
@@ -68,5 +69,22 @@ export let addPost = () => {
     state.profilePage.newPostText = '';
     rerenderEntireThree(state)
 }
+
+export let addMessage = () => {
+    let newMessage = {
+        text: state.dialogsPage.newMessageText,
+        id: 4
+    }
+    state.dialogsPage.messages.push(newMessage)
+    state.dialogsPage.newMessageText = ''
+    rerenderEntireThree(state)
+}
+
+export let updateMessage = newText => {
+    state.dialogsPage.newMessageText = newText;
+    rerenderEntireThree(state)
+}
+
+
 
 export default state
