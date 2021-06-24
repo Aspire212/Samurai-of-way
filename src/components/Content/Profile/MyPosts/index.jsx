@@ -15,15 +15,18 @@ const MyPosts = ({ postData, addPost }) => {
                     <textarea ref={ newPostElement }></textarea>
                 </div>
                 <div>
-                    <button 
+                    <button
                         className="add-post"
-                        onClick={ () => addPost(newPostElement.current.value) }>add post</button>
+                        onClick={ () => {
+                            addPost(newPostElement.current.value)
+                            newPostElement.current.value = ''
+                            } }>add post</button>
                 </div>
             </div>
             <div className="posts">
                 {postData.map((post) => (
                     <Post
-                        key={post.id}
+                        key={post.id + Math.random()}
                         message={post.message}
                         likes={post.likesCount}
                     />
